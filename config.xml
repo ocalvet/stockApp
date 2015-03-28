@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.stockapp857737" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>stockApp</name>
   <description>
-        An Ionic Framework and Cordova project.
+        An application to get quick stock information
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="calveto@gmail.com" href="http://stockapp.cts-cloud.com/">
+      CTS Team
     </author>
   <content src="index.html"/>
   <access origin="*"/>
