@@ -43,23 +43,35 @@
         </div>
 
         <div class="card" ng-show="showInfo">
-            <div class="item item-divider text-center">
-                {{ stockInfo.companyName }}
-            </div>
+            <div class="item item-divider text-center">{{ stockInfo.companyName }}</div>
             <div class="item item-text-wrap text-center">
                 <div class="row">
                     <div class="col text-left">Price</div>
-                    <div class="col text-right">
-                        {{ stockInfo.stockPrice | currency }}
-                    </div>
+                    <div class="col text-right">{{ stockInfo.stockPrice | currency }}</div>
+                </div>
+            </div>
+            <div class="item item-text-wrap text-center">
+                <div class="row">
+                    <div class="col text-left">Year High</div>
+                    <div class="col text-right">{{ stockInfo.yearHigh | currency }}</div>
+                </div>
+            </div>
+            <div class="item item-text-wrap text-center">
+                <div class="row">
+                    <div class="col text-left">Year Low</div>
+                    <div class="col text-right">{{ stockInfo.yearLow | currency }}</div>
                 </div>
             </div>
             <div class="item item-text-wrap text-center">
                 <div class="row">
                     <div class="col text-left">Volume</div>
-                    <div class="col text-right">
-                        {{ stockInfo.stockVolume | number }}
-                    </div>
+                    <div class="col text-right">{{ stockInfo.stockVolume | number }}</div>
+                </div>
+            </div>
+            <div class="item item-text-wrap text-center">
+                <div class="row">
+                    <div class="col text-left">Market Cap</div>
+                    <div class="col text-right">{{ stockInfo.marketCapitalization }}</div>
                 </div>
             </div>
         </div>

@@ -18,12 +18,18 @@ angular.module("stockInfo")
                     .success(function(data) {
                         if (data.query.results.quote.Name === null &&
                             data.query.results.quote.LastTradePriceOnly  === null &&
+                            data.query.results.quote.YearHigh  === null &&
+                            data.query.results.quote.YearLow  === null &&
+                            data.query.results.quote.MarketCapitalization  === null &&
                             data.query.results.quote.Volume === null ) {
                             defer.reject("No data found");
                         } else {
                             defer.resolve({
                                 companyName: data.query.results.quote.Name,
                                 stockPrice: data.query.results.quote.LastTradePriceOnly,
+                                yearHigh: data.query.results.quote.YearHigh,
+                                yearLow: data.query.results.quote.YearLow,
+                                marketCapitalization: data.query.results.quote.MarketCapitalization,
                                 stockVolume: data.query.results.quote.Volume
                             })
                         }
