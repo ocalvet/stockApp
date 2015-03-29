@@ -2,7 +2,7 @@
 
 angular
     .module("stockInfo")
-    .controller('StockInfoCtrl', function($scope, stocks, errorService){
+    .controller('StockInfoCtrl', ['$scope', 'stocks', 'errorService', function($scope, stocks, errorService){
 
         function resetStockInfo () {
             $scope.stockInfo = {};
@@ -22,4 +22,4 @@ angular
         };
         // Initialize scope
         resetStockInfo();
-    });
+    }]);

@@ -5,5 +5,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="stockApp node_modules" level="project" />
+    <orderEntry type="library" name="angular" level="project" />
+    <orderEntry type="library" name="ionic" level="project" />
+    <orderEntry type="library" name="jasmine" level="project" />
   </component>
 </module>
