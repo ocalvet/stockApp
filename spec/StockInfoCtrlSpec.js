@@ -5,7 +5,6 @@ describe("StockInfoCtrl", function() {
         errorServiceSpy,
         fakeStockInfo = { property: true},
         errorMsg = "error",
-        GOOD_SYMBOL = "AAPL",
         BAD_SYMBOL = "";
 
     // Load application module

@@ -25,57 +25,22 @@
     <!-- Common Module -->
     <script src="js/common/common.js"></script>
     <script src="js/common/errorService.js"></script>
+    <script src="js/common/ContentCtrl.js"></script>
 </head>
 <body ng-app="stockApp">
 
-<ion-pane ng-controller="StockInfoCtrl">
-    <ion-header-bar class="bar-stable text-center">
-        <h2 class="title">Stock Application</h2>
-    </ion-header-bar>
-    <ion-content>
+<ion-side-menus>
+  <!-- Center content -->
+  <ion-side-menu-content ng-controller="ContentCtrl">
+    <ion-view name="menu-content">
+    </ion-view>
+  </ion-side-menu-content>
 
-        <div class="list list-inset">
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="searchTerm"/>
-            </label>
-            <button class="item button button-calm button-full" ng-click="searchPrice(searchTerm)">Search</button>
-        </div>
+  <!-- Left menu -->
+  <ion-side-menu side="left">
+  </ion-side-menu>
 
-        <div class="card" ng-show="showInfo">
-            <div class="item item-divider text-center">{{ stockInfo.companyName }}</div>
-            <div class="item item-text-wrap text-center">
-                <div class="row">
-                    <div class="col text-left">Price</div>
-                    <div class="col text-right">{{ stockInfo.stockPrice | currency }}</div>
-                </div>
-            </div>
-            <div class="item item-text-wrap text-center">
-                <div class="row">
-                    <div class="col text-left">Year High</div>
-                    <div class="col text-right">{{ stockInfo.yearHigh | currency }}</div>
-                </div>
-            </div>
-            <div class="item item-text-wrap text-center">
-                <div class="row">
-                    <div class="col text-left">Year Low</div>
-                    <div class="col text-right">{{ stockInfo.yearLow | currency }}</div>
-                </div>
-            </div>
-            <div class="item item-text-wrap text-center">
-                <div class="row">
-                    <div class="col text-left">Volume</div>
-                    <div class="col text-right">{{ stockInfo.stockVolume | number }}</div>
-                </div>
-            </div>
-            <div class="item item-text-wrap text-center">
-                <div class="row">
-                    <div class="col text-left">Market Cap</div>
-                    <div class="col text-right">{{ stockInfo.marketCapitalization }}</div>
-                </div>
-            </div>
-        </div>
-    </ion-content>
-</ion-pane>
+</ion-side-menus>
+
 </body>
 </html>

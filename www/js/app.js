@@ -17,3 +17,16 @@ angular.module('stockApp', ['ionic', 'stockInfo'])
     }
   });
 })
+  .config(function($stateProvider){
+    $stateProvider
+    .state('stockInfo', {
+      url: '/',
+      views: {
+        'menu-content': {
+          templateUrl: 'partials/stockInfo.html'
+        }
+      }
+    });
+    // $urlRouteProvider
+    // .otherwise('/stockInfo')
+  });
