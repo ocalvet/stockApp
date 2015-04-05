@@ -1,9 +1,5 @@
-<ion-pane ng-controller="StockInfoCtrl">
-    <ion-header-bar class="bar-stable text-center">
-        <h2 class="title">Stock Application</h2>
-    </ion-header-bar>
+<ion-view view-title="Stock Info">
     <ion-content>
-
         <div class="list list-inset">
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
@@ -11,7 +7,6 @@
             </label>
             <button class="item button button-calm button-full" ng-click="searchPrice(searchTerm)">Search</button>
         </div>
-
         <div class="card" ng-show="showInfo">
             <div class="item item-divider text-center">{{ stockInfo.companyName }}</div>
             <div class="item item-text-wrap text-center">
@@ -46,5 +41,5 @@
             </div>
         </div>
     </ion-content>
-</ion-pane>
+</ion-view>
 
