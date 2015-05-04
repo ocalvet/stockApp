@@ -1,6 +1,17 @@
 <ion-view view-title="Stock Search">
     <ion-content>
-        Search
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Enter company name" ng-model="searchTerm">
+            </label>
+            <button class="item button button-calm button-full" ng-click="searchCompany(searchTerm)">Search</button>
+        </div>
+        <div class="list list-inset">
+            <div class="list-item" data-ng-repeat="company in companies">
+                {{ company.name }}
+            </div>
+        </div>
     </ion-content>
 </ion-view>
 
